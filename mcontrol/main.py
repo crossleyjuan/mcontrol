@@ -215,7 +215,7 @@ def initialize_replica_set(rsName, initialPort):
     init_replica_set["members"].append({"_id": len(init_replica_set["members"]), "host": f"localhost:{initialPort + i}"})
 
   for i in range(config["arbiters"]):
-    init_replica_set["members"].append({"_id": len(init_replica_set["members"]), "host": f'localhost:{initialPort + config["nodes"] + i}', "arbiterOnly": True})
+    init_replica_set["members"].append({"_id": len(init_replica_set["members"]), "host": f'localhost:{initialPort + config["nodes"] - config["arbiters"] + i}', "arbiterOnly": True})
 
   client.admin.command("replSetInitiate", init_replica_set)
     
