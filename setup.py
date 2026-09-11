@@ -11,9 +11,10 @@ setuptools.setup(
     name="mcontrol",
     version="0.0.0",
     author="Juan Pablo Crossley",
-    author_email=["juan.crossley@mongodb.com"],
+    author_email="juan.crossley@mongodb.com",
     py_modules=["mcontrol"],
-    description="A commmand line tool to create replicasets for testing using files instead of arguments.",
+    description="A command line tool to create and manage local MongoDB replica sets and sharded clusters for testing and development.",
+    license="Apache-2.0",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/mongodb-ps/mcontrol",
@@ -23,6 +24,7 @@ setuptools.setup(
     classifiers=[
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",
+        "License :: OSI Approved :: Apache Software License",
     ],
     entry_points={
         'console_scripts': [
